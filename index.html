@@ -10,7 +10,11 @@
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Heebo,sans-serif;line-height:1.6}
 .wrap{max-width:980px;margin:0 auto;padding:40px 18px 80px}
 header{border-bottom:1px solid var(--line);padding-bottom:26px;margin-bottom:34px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
 .kicker{color:var(--gold);letter-spacing:.08em;font-size:.85rem;font-weight:600;text-transform:uppercase}
+.lang-nav{display:inline-flex;gap:8px;font-size:.88rem}
+.lang-nav a{text-decoration:none;padding:5px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-weight:600}
+.lang-nav a.active{background:var(--gold);color:#fff;border-color:var(--gold)}
 h1{font-family:'Frank Ruhl Libre',serif;font-size:clamp(2rem,5vw,3.1rem);margin:.2em 0 .1em;font-weight:700}
 h2{font-family:'Frank Ruhl Libre',serif;font-size:1.7rem;margin:52px 0 16px}
 h3{font-family:'Frank Ruhl Libre',serif;font-size:1.25rem;margin:28px 0 12px}
@@ -31,11 +35,25 @@ ul.check{list-style:none;padding:0}ul.check li{background:var(--card);border:1px
 footer{margin-top:60px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:18px}
 a{color:var(--gold);font-weight:600;text-decoration:underline}
 code{background:#efe6d4;padding:2px 5px;border-radius:5px;font-size:.86em}
+table.perf th,table.perf td{white-space:nowrap;overflow-wrap:normal}
+@media (max-width:640px){
+  table:not(.perf),table:not(.perf) tbody,table:not(.perf) tr,table:not(.perf) td{display:block;width:100%}
+  table:not(.perf) tr:first-child{display:none}
+  table:not(.perf) tr{border-bottom:2px solid var(--line);padding:6px 0}
+  table:not(.perf) td{border-bottom:none;padding:6px 14px;overflow-wrap:anywhere}
+  table.perf,table.perf tbody{display:block;width:100%}
+  table.perf tr{display:flex;flex-wrap:wrap;border-bottom:1px solid var(--line);padding:8px 12px;gap:4px 10px;align-items:baseline}
+  table.perf th,table.perf td{border-bottom:none;padding:2px 4px;font-size:.82rem}
+  table.perf th:first-child,table.perf td:first-child{width:100%;font-size:.9rem}
+}
 </style>
 </head>
 <body><div class="wrap">
 <header>
+<div class="topbar">
 <div class="kicker">DREAMNOVA STUDIO · ÉTAT DES LIEUX CLIENT</div>
+<nav class="lang-nav"><a href="https://codenolimits.github.io/israel-dov-etat/" class="active">FR Français</a><a href="https://codenolimits.github.io/israel-dov-etat/he/">HE עברית</a></nav>
+</div>
 <h1>Israël Dov — הניצן שבגן</h1>
 <div class="sub">Paysagisme &amp; création de jardins (Jérusalem, Beit Shemesh, Mevasseret, Sud, Sharon) · État vérifié le dimanche 25 octobre 2026 à 17h30</div>
 </header>
@@ -95,7 +113,7 @@ Pour ce compte publicitaire, Meta ne propose <b>ni numéro de téléphone, ni ch
 
 <h3>A. Détail des dépenses réelles (13 → 19/10/2026 : 173,02 ₪ sur 847 ₪ posés)</h3>
 <p class="note">Campagne <code>הניצן שבגן | לידים | 30 יום | 10-2026</code> (ID <code>120251683807910363</code>) — Répartition des budgets posés en 20/20/60 : Jérusalem 215,95 ₪ · Sud (Ashdod et environs) 224,33 ₪ · Sharon (villes aisées) 406,72 ₪.</p>
-<div class="tbl"><table>
+<div class="tbl"><table class="perf">
 <tr><th>Annonce (6 v2 + 7 v1)</th><th>Statut actuel</th><th>Dépensé</th><th>Vues</th><th>Personnes</th><th>Clics lien</th><th>CPC</th><th>CTR</th><th>Leads</th></tr>
 <tr><td><b>SUD v2 | R6_ISRAEL_ORIGINAL_HD | r6</b></td><td><span class="err">Bloqué SMS</span></td><td><b>78,10 ₪</b></td><td>824</td><td>636</td><td><b>18</b></td><td>4,34 ₪</td><td>2,91 %</td><td><span class="ok">1 lead</span></td></tr>
 <tr><td><b>JER v2 | R6_ISRAEL_ORIGINAL_HD | r6</b></td><td><span class="err">Bloqué SMS</span></td><td><b>73,33 ₪</b></td><td>793</td><td>638</td><td><b>10</b></td><td>7,33 ₪</td><td>2,40 %</td><td><span class="ok">1 lead</span></td></tr>
@@ -106,9 +124,9 @@ Pour ce compte publicitaire, Meta ne propose <b>ni numéro de téléphone, ni ch
 <tr><td><i>7 anciennes annonces « v1 » (cumulées)</i></td><td>En pause</td><td><b>8,41 ₪</b></td><td>150</td><td>149</td><td><b>2</b></td><td>4,20 ₪</td><td>1,33 %</td><td>0</td></tr>
 <tr><th>TOTAL CERTIFIÉ</th><th>0 ₪ depuis le 19/10</th><th>173,02 ₪</th><th>1 945</th><th>1 428</th><th>31</th><th>5,58 ₪</th><th>1,59 %</th><th>3 leads</th></tr>
 </table></div>
-<p class="note"><b>Enseignement clé</b> : Le Sud a généré 2 leads sur 3 (44,52 ₪/lead), et la vidéo <b>P05 (Beit Shemesh avant/après)</b> a décroché <b>1 lead pour seulement 2,84 ₪</b> dès 36 vues avant que Meta ne bloque le compte. C'est pourquoi Israël a demandé de faire tourner en priorité les vidéos 2 (Mevasseret) et 5 (Beit Shemesh).</p>
+<p class="note"><b>Enseignement clé</b> : Le Sud a généré 2 leads sur 3 (84,46 ₪ dépensés dans le Sud, soit 42,23 ₪/lead), et la vidéo <b>P05 (Beit Shemesh avant/après)</b> a décroché <b>1 lead pour seulement 2,84 ₪</b> dès 36 vues avant que Meta ne bloque la diffusion des annonces. C'est pourquoi la vidéo Beit Shemesh mène la nouvelle campagne, accompagnée de la vidéo Mevasseret choisie par Israël.</p>
 
-<h3>B. Les 8 annonces prêtes en pause (filtrées selon les derniers choix d'Israël — prêtes pour le nouveau compte)</h3>
+<h3>B. Les 9 annonces prêtes en pause (filtrées selon les derniers choix d'Israël — prêtes pour le nouveau compte)</h3>
 <div class="tbl"><table>
 <tr><th>Zone (20 / 20 / 60)</th><th>Annonces prêtes à activer / copier</th><th>Vidéo &amp; Texte d'annonce</th><th>Annonces exclues (ne jamais activer)</th></tr>
 <tr><td><b>Jérusalem (20 %)</b><br>Ensemble <code>120251683808310363</code></td><td>• <code>JER_P05G</code> (Beit Shemesh)<br>• <code>JER_P07G</code> (Mevasseret)<br>• <code>JER_R6BG</code> (R6 musique seule, ID <code>120251817624280363</code>)</td><td>Textes « création de jardin » avec nom <b>« ישראל »</b> seul et phrase finale choisie par Israël :<br><span class="he">צרו איתנו קשר – ויחד ניצור את גינת החלומות.</span></td><td>Ancienne <code>JER_R6G</code> avec voix off remplacée par <code>JER_R6BG</code> musique seule.</td></tr>
@@ -138,13 +156,13 @@ Pour ce compte publicitaire, Meta ne propose <b>ni numéro de téléphone, ni ch
 <div class="tbl"><table>
 <tr><th>Jour &amp; Heure</th><th>Réseaux</th><th>Contenu &amp; Fichier exact</th><th>Légende hébreu vérifiée (<code>VERDICT: OK</code>)</th></tr>
 <tr><td><b>Lundi 26/10</b><br>12h30</td><td>IG + FB</td><td><b>Carrousel 6 photos — Chantier Beit Shemesh</b><br>(<code>c20, c21, c22, c23, c24, c17.webp</code> validées par Israël)</td><td><span class="he">גינה עם דשא, אבני מדרך ומפל מים – בית שמש 🌿 תמונות אמיתיות מהעבודות שלנו. צרו איתנו קשר – ויחד ניצור את גינת החלומות 📞 058-667-1625</span></td></tr>
-<tr><td><b>Lundi 26/10</b><br>18h00</td><td>IG + FB</td><td><b>Publication vidéo n° 1 — Vidéo 5 Beit Shemesh avant/après</b><br>(<code>reel_05_avant_apres_beit_shemesh.mp4</code>, 16 s)</td><td><span class="he">גינה עם דשא, אבני מדרך ומפל מים – בית שמש 🌿 לפני ואחרי: הכנת הקרקע, מערכת ההשקיה והגינה היום. צרו איתנו קשר – ויחד ניצור את גינת החלומות 📞 058-667-1625</span></td></tr>
+<tr><td><b>Lundi 26/10</b><br>18h00</td><td>IG + FB</td><td><b>Publication vidéo n° 1 — Vidéo 5 Beit Shemesh avant/après</b><br>(<code>reel_05_avant_apres_beit_shemesh.mp4</code>, 16 s)</td><td><span class="he">לפני ואחרי בבית שמש – מהשטח החשוף לגינה ירוקה עם דשא, אבני מדרך ומפל מים 🌿 צרו איתנו קשר – ויחד ניצור את גינת החלומות 📞 058-667-1625</span></td></tr>
 <tr><td><b>Mardi 27/10</b><br>18h00</td><td>IG + FB</td><td><b>Publication vidéo n° 2 — Vidéo 2 Toits de nuit (<code>reel_01</code>)</b><br>+ <b>Mevasseret Zion (<code>P07</code>)</b> en supplément</td><td><span class="he">הקמת גינות על גגות ומרפסות שמש – בבנייה ייחודית 🌿 תמונות אמיתיות מהעבודות שלנו. צרו איתנו קשר – ויחד ניצור את גינת החלומות 📞 058-667-1625</span></td></tr>
 <tr><td><b>Mercredi 28/10</b><br>12h30</td><td>TT + IG + FB</td><td><b>Reel Allées &amp; pas japonais — Jérusalem</b><br>(<code>reel_07_allees_et_entrees.mp4</code>, 15 s)</td><td><span class="he">גינת כניסה עם אבני מדרך וצמחייה פורחת – ירושלים 🌿 תמונות אמיתיות מהעבודות שלנו. צרו איתנו קשר – ויחד ניצור את גינת החלומות 📞 058-667-1625</span></td></tr>
 <tr><td><b>Mercredi 28/10</b><br>18h00</td><td>TT + IG + FB</td><td><b>Publication vidéo n° 3 — Balcons en jardinières « באדניות »</b><br>(<code>reel_03c_mirpasot_shemesh_beadniyot_alef.mp4</code>, 16 s)</td><td><span class="he">הקמת גינות על גגות ומרפסות שמש – באדניות 🌿 תמונות אמיתיות מהעבודות שלנו. צרו איתנו קשר – ויחד ניצור את גינת החלומות 📞 058-667-1625</span></td></tr>
-<tr><td><b>Jeudi 29/10</b><br>12h30</td><td>IG + FB</td><td><b>Carrousel 5 photos — Jérusalem &amp; Mevasseret Zion</b><br>(<code>c14, c15, c16, c02, c03.webp</code>)</td><td><span class="he">גינות פרטיות, גגות ומרפסות שתכננו, הקמנו והארנו 🌿 תמונות אמיתיות מהעבודות שלנו. צרו איתנו קשר – ויחד ניצור את גינת החלומות 📞 058-667-1625</span></td></tr>
-<tr><td><b>Jeudi 29/10</b><br>18h00</td><td>TT + IG + FB</td><td><b>Reel n° 4 — Jardin méditerranéen v4</b><br>(<code>reel_29_reel_d_gina_yam_tichonit_v4.mp4</code>, 14 s)</td><td><span class="he">הקמת גינה ים תיכונית 🌿 תמונות אמיתיות מהעבודות שלנו. צרו איתנו קשר – ויחד ניצור את גינת החלומות 📞 058-667-1625</span></td></tr>
-<tr><td><b>Vendredi 30/10</b><br>11h30 (arrêt 15h00)</td><td>TT + IG + FB</td><td><b>Reel n° 5 — R6 musique seule (sans « צלמו תמונה »)</b><br>(<code>video2b_R6_sans_tsalmu_tmuna.mp4</code>, 11,2 s)</td><td><span class="he">תכנון והקמה של גינות פרטיות, גינות גג ומרפסת ותאורת גן 🌿 צרו איתנו קשר – ויחד ניצור את גינת החלומות 📞 058-667-1625</span></td></tr>
+<tr><td><b>Jeudi 29/10</b><br>12h30</td><td>IG + FB</td><td><b>Carrousel 5 photos — Jérusalem &amp; Mevasseret Zion</b><br>(<code>c14, c15, c16, c02, c03.webp</code>)</td><td><span class="he">גינות פרטיות, גגות ומרפסות שתכננו והקמנו – כולל תאורת גן 🌿 תמונות אמיתיות מהעבודות שלנו. צרו איתנו קשר – ויחד ניצור את גינת החלומות 📞 058-667-1625</span></td></tr>
+<tr><td><b>Jeudi 29/10</b><br>18h00</td><td>TT + IG + FB</td><td><b>Reel n° 4 — Jardin méditerranéen v4</b><br>(<code>reel_29_reel_d_gina_yam_tichonit_v4.mp4</code>, 14 s)</td><td><span class="he">הקמת גינה ים־תיכונית 🌿 תמונות אמיתיות מהעבודות שלנו. צרו איתנו קשר – ויחד ניצור את גינת החלומות 📞 058-667-1625</span></td></tr>
+<tr><td><b>Vendredi 30/10</b><br>11h30 (arrêt 15h00)</td><td>TT + IG + FB</td><td><b>Reel n° 5 — R6 musique seule (sans « צלמו תמונה »)</b><br>(<code>video2b_R6_sans_tsalmu_tmuna.mp4</code>, 11,2 s)</td><td><span class="he">תכנון והקמה של גינות פרטיות, גינות גג ומרפסות ותאורת גן 🌿 צרו איתנו קשר – ויחד ניצור את גינת החלומות 📞 058-667-1625</span></td></tr>
 <tr><td><b>Ven 30/10 15h00 → Sam 31/10 20h30</b></td><td>—</td><td><b>SHABBAT — Pause totale</b></td><td>Zéro publication, zéro annonce active, zéro message.</td></tr>
 </table></div>
 
